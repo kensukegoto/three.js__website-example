@@ -5,14 +5,43 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital@1&family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
       body {
         margin: 0;
+        -webkit-font-smoothing: antialiased;
+      }
+      .font-exo {
+        font-family: 'Exo 2', sans-serif;
+      }
+      .font-mono {
+        font-family: 'Space Mono', monospace;
       }
     </style>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <div
+        class="absolute text-white text-center"
+        style="top: 50%; left: 50%; transform: translate(-50%, -50%)"
+      >
+        <h1 class="font-mono text-sm uppercase tracking-wide">Kensuke Goto</h1>
+        <p class="font-exo text-4xl">
+          ONE WITH AN EVERLASTING DESIRE FOR THE UNKNOWN & UNTOLD
+        </p>
+        <a
+          class="inline-block border px-4 py-2 rounded-lg text-sm font-mono mt-8 hover:bg-white hover:text-gray-800"
+        >
+          View Work
+        </a>
+      </div>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
