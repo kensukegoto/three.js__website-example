@@ -4,7 +4,6 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 import * as dat from 'dat.gui';
-import { StaticReadUsage } from 'three';
 
 const gui = new dat.GUI();
 const world = {
@@ -227,3 +226,9 @@ document.querySelector('#viewWorkBtn').addEventListener('click', e => {
     delay: 2
   });
 });
+
+addEventListener('resize', () => {
+  camera.spect = innerWidth / innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(innerWidth, innerHeight);
+})
